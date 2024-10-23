@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form method="POST"> {% csrf_token %}
+    <label for="id3">Name :</label>
+    <input name="fact" id="id3" type="number" placeholder="enter number" required>
+    <br>
+    <br><button>Submit</button>
+    </form>
+    <hr>
+    {% if res %}
+        the factorial of a given number {{ res }} 
+    
+    {% endif %}
+    
+</body>
+</html>

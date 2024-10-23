@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form method="POST"> {% csrf_token %}
+    <label for="id2">Name :</label>
+    <input name="even" id="id2" type="number" placeholder="enter number" required>
+    <br>
+    <br><button>Submit</button>
+    </form>
+    <hr>
+
+    {% if res == True %}
+        the given number {{ number }} is even 
+    {% elif res == False %}
+        The given number {{ number }} is odd
+    {% else %}
+    Enter a number
+    {% endif %}
+    
+
+    
+</body>
+</html>
